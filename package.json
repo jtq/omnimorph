@@ -6,10 +6,9 @@
     "main": "electron-index.js",
     "scripts": {
         "setup": "npm install -g cordova && cordova prepare",
-        "build": "cordova build",
-        "electron": "electron . &",
-        "android": "cordova emulate android",
-        "browser": "cordova run browser",
+        "electron": "cordova build browser && electron . &",
+        "android": "cordova build android && cordova emulate android",
+        "browser": "cordova build browser && cordova run browser",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Apache Cordova Team",
